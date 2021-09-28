@@ -1,0 +1,8 @@
+prefix=/home/dhilan/oruga_ws/install
+
+Name: urdf-model_description
+Description: Description of urdf-model_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

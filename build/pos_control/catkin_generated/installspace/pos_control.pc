@@ -1,0 +1,8 @@
+prefix=/home/dhilan/oruga_ws/install
+
+Name: pos_control
+Description: Description of pos_control
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
