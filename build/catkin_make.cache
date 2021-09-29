@@ -1,2 +1,2 @@
-Untitled_description:pos_control:urdf-model_description
+pos_control:urdf-model_description
 -DCATKIN_DEVEL_PREFIX=/home/dhilan/oruga_ws/devel -DCMAKE_INSTALL_PREFIX=/home/dhilan/oruga_ws/install -G Unix Makefiles

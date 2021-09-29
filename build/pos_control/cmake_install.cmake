@@ -38,7 +38,55 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pos_control/action" TYPE FILE FILES "/home/dhilan/oruga_ws/src/pos_control/action/DoPositionControl.action")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pos_control/msg" TYPE FILE FILES
+    "/home/dhilan/oruga_ws/devel/share/pos_control/msg/DoPositionControlAction.msg"
+    "/home/dhilan/oruga_ws/devel/share/pos_control/msg/DoPositionControlActionGoal.msg"
+    "/home/dhilan/oruga_ws/devel/share/pos_control/msg/DoPositionControlActionResult.msg"
+    "/home/dhilan/oruga_ws/devel/share/pos_control/msg/DoPositionControlActionFeedback.msg"
+    "/home/dhilan/oruga_ws/devel/share/pos_control/msg/DoPositionControlGoal.msg"
+    "/home/dhilan/oruga_ws/devel/share/pos_control/msg/DoPositionControlResult.msg"
+    "/home/dhilan/oruga_ws/devel/share/pos_control/msg/DoPositionControlFeedback.msg"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pos_control/cmake" TYPE FILE FILES "/home/dhilan/oruga_ws/build/pos_control/catkin_generated/installspace/pos_control-msg-paths.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/dhilan/oruga_ws/devel/include/pos_control")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/dhilan/oruga_ws/devel/share/roseus/ros/pos_control")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/dhilan/oruga_ws/devel/share/common-lisp/ros/pos_control")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/dhilan/oruga_ws/devel/share/gennodejs/ros/pos_control")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/dhilan/oruga_ws/devel/lib/python2.7/dist-packages/pos_control")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/dhilan/oruga_ws/devel/lib/python2.7/dist-packages/pos_control")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/dhilan/oruga_ws/build/pos_control/catkin_generated/installspace/pos_control.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pos_control/cmake" TYPE FILE FILES "/home/dhilan/oruga_ws/build/pos_control/catkin_generated/installspace/pos_control-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

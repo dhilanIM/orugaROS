@@ -1,0 +1,9 @@
+#Goal
+int32 q_d  #posicion deseada
+---
+#Result
+int32 q_i   #posicion actual
+---
+#Feedback
+int32 q_e   # error de posicion
+
