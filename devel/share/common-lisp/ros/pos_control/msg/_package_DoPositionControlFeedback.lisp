@@ -1,4 +1,4 @@
 (cl:in-package pos_control-msg)
-(cl:export '(Q_E-VAL
-          Q_E
+(cl:export '(P_E-VAL
+          P_E
 ))

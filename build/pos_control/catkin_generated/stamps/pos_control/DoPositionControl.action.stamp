@@ -1,9 +1,9 @@
 #Goal
-int32 q_d  #posicion deseada
+float32[] p_d  #posicion deseada
 ---
 #Result
-int32 q_i   #posicion actual
+float32[] p_i   #posicion actual
 ---
 #Feedback
-int32 q_e   # error de posicion
+float32[] p_e   # error de posicion
 

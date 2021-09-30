@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="pos_control" type="action_server.py" name="action_server_node" output="screen">
+    </node>
+    <node pkg="pos_control" type="action_client.py" name="action_client_node" output="screen">
+    </node>
+
+</launch>
