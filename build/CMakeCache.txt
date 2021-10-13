@@ -409,6 +409,12 @@ rostime_DIR:PATH=/opt/ros/melodic/share/rostime/cmake
 std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake
 
 //Value Computed by CMake
+urdf-model-v2_description_BINARY_DIR:STATIC=/home/dhilan/oruga_ws/build/urdf-model-v2_description
+
+//Value Computed by CMake
+urdf-model-v2_description_SOURCE_DIR:STATIC=/home/dhilan/oruga_ws/src/urdf-model-v2_description
+
+//Value Computed by CMake
 urdf-model_description_BINARY_DIR:STATIC=/home/dhilan/oruga_ws/build/urdf-model_description
 
 //Value Computed by CMake

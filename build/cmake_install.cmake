@@ -132,7 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/dhilan/oruga_ws/build/gtest/cmake_install.cmake")
   include("/home/dhilan/oruga_ws/build/pos_control/cmake_install.cmake")
-  include("/home/dhilan/oruga_ws/build/urdf-model_description/cmake_install.cmake")
+  include("/home/dhilan/oruga_ws/build/urdf-model-v2_description/cmake_install.cmake")
 
 endif()
 

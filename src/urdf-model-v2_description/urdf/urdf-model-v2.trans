@@ -1,23 +1,23 @@
 <?xml version="1.0" ?>
-<robot name="urdf-model" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+<robot name="urdf-model-v2" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<transmission name="Rev7_tran">
+<transmission name="Rev10_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev7">
+  <joint name="Rev10">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Rev7_actr">
+  <actuator name="Rev10_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Rev8_tran">
+<transmission name="Rev11_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev8">
+  <joint name="Rev11">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Rev8_actr">
+  <actuator name="Rev11_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>

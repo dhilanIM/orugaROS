@@ -18,14 +18,14 @@ set(CMAKE_MAKEFILE_DEPENDS
   "pos_control/catkin_generated/pos_control-msg-extras.cmake.develspace.in"
   "pos_control/catkin_generated/pos_control-msg-extras.cmake.installspace.in"
   "pos_control/cmake/pos_control-genmsg.cmake"
-  "urdf-model_description/catkin_generated/package.cmake"
+  "urdf-model-v2_description/catkin_generated/package.cmake"
   "/home/dhilan/oruga_ws/devel/share/pos_control/cmake/pos_control-msg-paths.cmake"
   "/home/dhilan/oruga_ws/src/CMakeLists.txt"
   "/home/dhilan/oruga_ws/src/pos_control/CMakeLists.txt"
   "/home/dhilan/oruga_ws/src/pos_control/action/DoPositionControl.action"
   "/home/dhilan/oruga_ws/src/pos_control/package.xml"
-  "/home/dhilan/oruga_ws/src/urdf-model_description/CMakeLists.txt"
-  "/home/dhilan/oruga_ws/src/urdf-model_description/package.xml"
+  "/home/dhilan/oruga_ws/src/urdf-model-v2_description/CMakeLists.txt"
+  "/home/dhilan/oruga_ws/src/urdf-model-v2_description/package.xml"
   "/opt/ros/melodic/share/actionlib/cmake/actionlib-msg-extras.cmake"
   "/opt/ros/melodic/share/actionlib/cmake/actionlibConfig-version.cmake"
   "/opt/ros/melodic/share/actionlib/cmake/actionlibConfig.cmake"
@@ -217,7 +217,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/googlemock/gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pos_control/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "urdf-model_description/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "urdf-model-v2_description/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

@@ -1923,22 +1923,22 @@ clean: pos_control/CMakeFiles/pos_control_gencpp.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory urdf-model_description
+# Directory level rules for directory urdf-model-v2_description
 
 # Convenience name for "all" pass in the directory.
-urdf-model_description/all:
+urdf-model-v2_description/all:
 
-.PHONY : urdf-model_description/all
+.PHONY : urdf-model-v2_description/all
 
 # Convenience name for "clean" pass in the directory.
-urdf-model_description/clean:
+urdf-model-v2_description/clean:
 
-.PHONY : urdf-model_description/clean
+.PHONY : urdf-model-v2_description/clean
 
 # Convenience name for "preinstall" pass in the directory.
-urdf-model_description/preinstall:
+urdf-model-v2_description/preinstall:
 
-.PHONY : urdf-model_description/preinstall
+.PHONY : urdf-model-v2_description/preinstall
 
 #=============================================================================
 # Special targets to cleanup operation of make.
