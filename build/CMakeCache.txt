@@ -45,9 +45,8 @@ CATKIN_WHITELIST_PACKAGES:STRING=
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
-// CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
-CMAKE_BUILD_TYPE:STRING=
+//Choose Release or Debug
+CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -320,6 +319,9 @@ gennodejs_DIR:PATH=/opt/ros/melodic/share/gennodejs/cmake
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/melodic/share/genpy/cmake
 
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/melodic/share/geometry_msgs/cmake
+
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/dhilan/oruga_ws/build/gtest/googlemock
 
@@ -379,6 +381,12 @@ message_generation_DIR:PATH=/opt/ros/melodic/share/message_generation/cmake
 message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
 
 //Value Computed by CMake
+my_laser_matcher_BINARY_DIR:STATIC=/home/dhilan/oruga_ws/build/my_laser_scan_matcher/my_laser_matcher
+
+//Value Computed by CMake
+my_laser_matcher_SOURCE_DIR:STATIC=/home/dhilan/oruga_ws/src/my_laser_scan_matcher/my_laser_matcher
+
+//Value Computed by CMake
 pos_control_BINARY_DIR:STATIC=/home/dhilan/oruga_ws/build/pos_control
 
 //Value Computed by CMake
@@ -405,6 +413,9 @@ rospy_DIR:PATH=/opt/ros/melodic/share/rospy/cmake
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/melodic/share/rostime/cmake
 
+//The directory containing a CMake configuration file for sensor_msgs.
+sensor_msgs_DIR:PATH=/opt/ros/melodic/share/sensor_msgs/cmake
+
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake
 
@@ -422,6 +433,21 @@ urdf-model_description_SOURCE_DIR:STATIC=/home/dhilan/oruga_ws/src/urdf-model_de
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
+
+//Value Computed by CMake
+ydlidar_BINARY_DIR:STATIC=/home/dhilan/oruga_ws/build/ydlidar
+
+//Value Computed by CMake
+ydlidar_SOURCE_DIR:STATIC=/home/dhilan/oruga_ws/src/ydlidar
+
+//Value Computed by CMake
+ydlidar_ros_driver_BINARY_DIR:STATIC=/home/dhilan/oruga_ws/build/ydlidar_ros_driver
+
+//Value Computed by CMake
+ydlidar_ros_driver_SOURCE_DIR:STATIC=/home/dhilan/oruga_ws/src/ydlidar_ros_driver
+
+//The directory containing a CMake configuration file for ydlidar_sdk.
+ydlidar_sdk_DIR:PATH=/usr/local/lib/cmake/ydlidar_sdk
 
 
 ########################
@@ -533,7 +559,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -604,4 +630,10 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+//YDLIDAR_SDK include directories
+YDLIDAR_SDK_INCLUDE_DIRS:INTERNAL=/usr/local/include/src;/usr/local/include
+//YDLIDAR_SDK libraries
+YDLIDAR_SDK_LIBRARIES:INTERNAL=ydlidar_sdk;pthread;rt
+//YDLIDAR_SDK library directories
+YDLIDAR_SDK_LIBRARY_DIRS:INTERNAL=
 

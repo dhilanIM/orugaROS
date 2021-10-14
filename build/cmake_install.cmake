@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -133,6 +133,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/dhilan/oruga_ws/build/gtest/cmake_install.cmake")
   include("/home/dhilan/oruga_ws/build/pos_control/cmake_install.cmake")
   include("/home/dhilan/oruga_ws/build/urdf-model-v2_description/cmake_install.cmake")
+  include("/home/dhilan/oruga_ws/build/ydlidar/cmake_install.cmake")
 
 endif()
 

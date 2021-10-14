@@ -1,2 +1,2 @@
-pos_control:urdf-model-v2_description
+pos_control:urdf-model-v2_description:ydlidar
 -DCATKIN_DEVEL_PREFIX=/home/dhilan/oruga_ws/devel -DCMAKE_INSTALL_PREFIX=/home/dhilan/oruga_ws/install -G Unix Makefiles

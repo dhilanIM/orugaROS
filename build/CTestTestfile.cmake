@@ -7,3 +7,4 @@
 subdirs("gtest")
 subdirs("pos_control")
 subdirs("urdf-model-v2_description")
+subdirs("ydlidar")
