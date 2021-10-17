@@ -3,7 +3,7 @@
 from math import pi,sin,cos,pow, sqrt,atan2
 #from time import thread_time
 import rospy
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist,PoseStamped #Twist for publish Velocities    Pose2D to get position x,y,theta
 from nav_msgs.msg import Odometry
 from rospy.core import is_shutdown
 from tf.transformations import euler_from_quaternion, quaternion_from_euler
@@ -23,10 +23,33 @@ v_max = 0.22; w_max = 2.84; # maximum velocities
 
 #ex = 0.0; ey = 0.0; V = 0.0; W = 0.0 #Errors and velocities initializations
 x_i = 0; y_i = 0; theta_i = 0
-def odom_callback(msg):
+def poseStamped_callback(msg):
     global x_i
     global y_i
     global theta_i
+    #x_i = msg.x
+    #y_i = msg.y
+    
+    x_i = msg.pose.position.x
+    y_i = msg.pose.position.y
+
+    quaternion = msg.pose.orientation
+    quats = [quaternion.x,quaternion.y,quaternion.z,quaternion.w]
+
+    (roll,pitch,theta_i) = euler_from_quaternion(quats)
+    
+    quaternion = msg.pose.orientation
+    quats = [quaternion.x,quaternion.y,quaternion.z,quaternion.w]
+
+    (roll,pitch,theta_i) = euler_from_quaternion(quats)
+
+def odom_callback(msg):
+    pass
+    """
+    #global x_i
+    #global y_i
+    global theta_i
+
     
     x_i = msg.pose.pose.position.x
     y_i = msg.pose.pose.position.y
@@ -35,9 +58,12 @@ def odom_callback(msg):
     quats = [quaternion.x,quaternion.y,quaternion.z,quaternion.w]
 
     (roll,pitch,theta_i) = euler_from_quaternion(quats)
-
     
+    quaternion = msg.pose.pose.orientation
+    quats = [quaternion.x,quaternion.y,quaternion.z,quaternion.w]
 
+    (roll,pitch,theta_i) = euler_from_quaternion(quats)
+    """
 
 
 """
@@ -50,6 +76,7 @@ if __name__=="__main__":
         rate = rospy.Rate(50)
 
         vel_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10) #Publisher
+        rospy.Subscriber('/pose_stamped',PoseStamped,poseStamped_callback)   #Suscriber
         rospy.Subscriber('/odom',Odometry,odom_callback)   #Suscriber
 
         x_error = x_d - x_i

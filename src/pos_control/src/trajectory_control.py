@@ -7,7 +7,7 @@ For more information, please refer to that source file.
 __author__ = "C. Mauricio Arteaga-Escamilla from 'Robotica Posgrado' (YouTube channel)"
 
 import rospy, math
-from geometry_msgs.msg import Twist, Pose2D #To publish velocities and tracking errors using the Pose2D message type
+from geometry_msgs.msg import Twist, Pose2D , PoseStamped#To publish velocities and tracking errors using the Pose2D message type
 from nav_msgs.msg import Odometry
 from tf.transformations import euler_from_quaternion, quaternion_from_euler
 from math import sin, cos, pi
@@ -47,8 +47,28 @@ def getKey(): #Function to use keyboard events on Linux
     termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
     return key
 """
+def poseStamped_callback(msg):
+    global x
+    global y
+    global yaw
+    #x_i = msg.x
+    #y_i = msg.y
+    
+    x = msg.pose.position.x
+    y = msg.pose.position.y
+
+    quaternion = msg.pose.orientation
+    quats = [quaternion.x,quaternion.y,quaternion.z,quaternion.w]
+
+    (roll,pitch,yaw) = euler_from_quaternion(quats)
+    
+    quaternion = msg.pose.orientation
+    quats = [quaternion.x,quaternion.y,quaternion.z,quaternion.w]
+
+    (roll,pitch,theta_i) = euler_from_quaternion(quats)
 
 def odomCallback(msg): #Callback function to get the robot posture
+	"""
 	global x; global y; global yaw
 	x = msg.pose.pose.position.x
 	y = msg.pose.pose.position.y
@@ -58,6 +78,8 @@ def odomCallback(msg): #Callback function to get the robot posture
 	quater_list = [quater.x, quater.y, quater.z, quater.w]
 	(roll, pitch, yaw) = euler_from_quaternion(quater_list) #Euler angles are given in radians
 	#quat = quaternion_from_euler(roll, pitch,yaw); print quat
+	"""
+	pass
 	
 def velocity_controller(): #Function to generate the desired trajectory and to compute the signals control
 	global ex, ey, V, W, Xd,Yd #Indicate that some variables are global to be used in the main_function
@@ -97,6 +119,7 @@ def main_function():
 	
 	vel_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10) #To publish in the topic
 	rospy.Subscriber('/odom',Odometry, odomCallback) #To subscribe to the topic
+	rospy.Subscriber('/pose_stamped',PoseStamped,poseStamped_callback)   #Suscriber
 
 	error_pub = rospy.Publisher('/tracking_errors', Pose2D, queue_size=10);
 
