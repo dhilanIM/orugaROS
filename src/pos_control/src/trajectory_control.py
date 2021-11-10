@@ -28,7 +28,7 @@ l = 0.1
 
 vel_msg = Twist()
 error_msg = Pose2D()
-t = 0.0; t0 = 0.0; V_max = 0.22; W_max = 2.84; #Timer, initial time, maximum velocities [m/s, rad/s], respectively, for a burger type
+t = 0.0; t0 = 0.0; V_max = 0.15; W_max = 1.0; #Timer, initial time, maximum velocities [m/s, rad/s], respectively, for a burger type
 T = 100.0; k = 0.15; #Trajectory period, controller gains kx = ky = k
 ex = 0.0; ey = 0.0; V = 0.0; W = 0.0
 
@@ -48,6 +48,7 @@ def getKey(): #Function to use keyboard events on Linux
     return key
 """
 def poseStamped_callback(msg):
+	"""
     global x
     global y
     global yaw
@@ -66,9 +67,11 @@ def poseStamped_callback(msg):
     quats = [quaternion.x,quaternion.y,quaternion.z,quaternion.w]
 
     (roll,pitch,theta_i) = euler_from_quaternion(quats)
+	"""
+	pass
 
 def odomCallback(msg): #Callback function to get the robot posture
-	"""
+	
 	global x; global y; global yaw
 	x = msg.pose.pose.position.x
 	y = msg.pose.pose.position.y
@@ -77,9 +80,10 @@ def odomCallback(msg): #Callback function to get the robot posture
 	quater = msg.pose.pose.orientation
 	quater_list = [quater.x, quater.y, quater.z, quater.w]
 	(roll, pitch, yaw) = euler_from_quaternion(quater_list) #Euler angles are given in radians
+
 	#quat = quaternion_from_euler(roll, pitch,yaw); print quat
-	"""
-	pass
+	
+	
 	
 def velocity_controller(): #Function to generate the desired trajectory and to compute the signals control
 	global ex, ey, V, W, Xd,Yd #Indicate that some variables are global to be used in the main_function

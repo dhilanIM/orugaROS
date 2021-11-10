@@ -1,0 +1,9 @@
+#Goal
+float32[] p_d  #posicion deseada
+---
+#Result
+float32[] p_i   #posicion actual
+---
+#Feedback
+float32[] p_e   # error de posicion
+
